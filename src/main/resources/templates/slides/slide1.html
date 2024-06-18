@@ -1,0 +1,19 @@
+
+<div class="spacer-10"></div>
+
+<h1 style="text-align: center">&lt;/&gt;htm<span class="highlight">x</span></h1>
+<p class="subtitle">Power tools for HTML</p>
+
+<p class="center">by Lars Aaberg</p>
+<p class="center relative indent-2 highlight">Fagdag 21.06</p>
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide2}">Next</button>
+
+</div>

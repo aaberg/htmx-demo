@@ -1,0 +1,19 @@
+<div class="spacer-10"></div>
+<h3>This presentations is made with</h3>
+<h2 class="highlight">htmx</h2>
+
+<p class="center"><a href="https://github.com/aaberg/htmx-demo">https://github.com/aaberg/htmx-demo</a></p>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide3}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide5}">Next</button>
+</div>
+

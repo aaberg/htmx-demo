@@ -1,0 +1,111 @@
+:root {
+    --background: #1e1f22;
+    --text: #f5f5f5;
+    --highlight-text: #41648b;
+}
+
+html, body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Trebuchet MS", sans-serif;
+    position: relative;
+    height: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 10rem;
+}
+h1.extra-large {
+    font-size: 15rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+a {
+    color: var(--text);
+}
+
+p.subtitle {
+    font-size: 1rem;
+    margin: 0 auto 0 auto;
+    width: 20rem;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: -3rem;
+    left: 15rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+    margin: 0 auto 0 auto;
+}
+
+.indent-2 {
+    text-indent: 3em;
+}
+
+.indent-n-15 {
+    text-indent: -15em;
+}
+
+.indent-15 {
+    text-indent: 15em;
+}
+
+.highlight {
+    color: var(--highlight-text);
+}
+
+.highlight_js {
+    color: #eede52;
+}
+
+.highlight_ts {
+    color: #5478c0;
+}
+
+.highlight_node {
+    color: #8cc84b;
+}
+
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    color: transparent;
+}
+
+div.sonat-logo {
+    background-image: url("../images/sonat-logo.png");
+    background-repeat: no-repeat;
+    background-size: 15rem;
+    width: 15rem;
+    height: 3rem;
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+
+div.ctrl-buttons {
+    visibility: hidden;
+}
+
+.spacer-10 {
+    height: 10rem;
+}

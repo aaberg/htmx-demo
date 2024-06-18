@@ -1,0 +1,10 @@
+<h3 style="text-indent: 10em">... and should I learn it?</h3>
+
+<div clasS="ctrl-buttons">
+
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide3}">Previous</button>
+</div>

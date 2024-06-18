@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Htmx presentation</title>
+
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+</head>
+<body>
+
+<!--<div hx-trigger="keyup[keyCode==39], keup[keyCode==13]"></div>-->
+
+<div id="container" hx-trigger="load" th:hx-get="@{${slide}}"></div>
+</body>
+</html>

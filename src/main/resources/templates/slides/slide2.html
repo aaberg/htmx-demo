@@ -1,0 +1,21 @@
+
+<div class="spacer-10"></div>
+
+<h3 class="indent-n-15">So, what is</h3>
+<h1>&lt;/&gt;htm<span class="highlight">x</span>?</h1>
+
+<div class="sonat-logo"></div>
+
+<div hx-trigger="keyup[key=='ArrowRight'] from:body"
+     hx-swap="outerHTML"
+     th:hx-get="@{/slides/slide2_2}">
+
+</div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide1}">Previous</button>
+</div>
