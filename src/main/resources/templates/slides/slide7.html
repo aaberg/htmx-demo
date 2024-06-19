@@ -1,8 +1,10 @@
-<div class="spacer-10"></div>
-<h3>This presentations is made with</h3>
-<h2>htm<span class="highlight">x</span></h2>
+<div class="spacer-5"></div>
+<h2>htm<span class="highlight">x</span> works like this</h2>
+<div class="spacer-5"></div>
 
-<p class="center"><a href="https://github.com/aaberg/htmx-demo">https://github.com/aaberg/htmx-demo</a></p>
+<div class="center">
+    <img class="ib" th:src="@{/images/htmx-post-reply.svg}" alt="post-reply">
+</div>
 
 <div class="sonat-logo"></div>
 
@@ -11,11 +13,10 @@
             hx-target="#container"
             hx-push-url="true"
             hx-swap="innerHTML"
-            th:hx-get="@{/slides/slide3}">Previous</button>
+            th:hx-get="@{/slides/slide6}">Previous</button>
     <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
             hx-target="#container"
             hx-push-url="true"
             hx-swap="innerHTML"
-            th:hx-get="@{/slides/slide5}">Next</button>
+            th:hx-get="@{/slides/slide8}">Next</button>
 </div>
-

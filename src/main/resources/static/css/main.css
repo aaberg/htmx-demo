@@ -109,3 +109,11 @@ div.ctrl-buttons {
 .spacer-10 {
     height: 10rem;
 }
+
+.spacer-5 {
+    height: 5rem;
+}
+
+.ib {
+    display: inline-block;
+}

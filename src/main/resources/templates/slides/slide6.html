@@ -1,0 +1,26 @@
+<div clasS="spacer-5"></div>
+<h2><span class="highlight">Before</span> we get into what it is,</h2>
+<h3>Let's go back the the <span class="highlight">basics</span> real quick</h3>
+<div clasS="spacer-5"></div>
+<p class="center"><span class="rainbow-text"> GET, POST, PATCH, PUT, DELETE</span></p>
+<div clasS="spacer-5"></div>
+<div class="center">
+    <img class="ib" th:src="@{/images/Client-server-request-response.svg}" alt="client server" />
+</div>
+<div class="spacer-5"></div>
+<p class="center">They had it pretty easy back then</p>
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide5}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide7}">Next</button>
+</div>
