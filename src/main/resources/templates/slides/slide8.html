@@ -1,0 +1,41 @@
+<div class="spacer-5"></div>
+<h3>Random number <span class="highlight">example</span></h3>
+<div class="spacer-5"></div>
+
+<div class="ctext">GET /randomnumber returns the following result</div>
+<pre><code class="language-html">
+&lt;div&gt;{rand.next()}&lt;/div&gt;
+</code></pre>
+
+<div class="spacer-1"></div>
+<p class="ctext">html with htmx attributes</p>
+<pre><code class="language-html">&lt;div&gt;Random number&lt;/div&gt;
+&lt;div hx-get="/randomnumber" hx-trigger="load"&gt;&lt;/div&gt;
+</code></pre>
+<div class="spacer-1"></div>
+<div class="ctext">Result:</div>
+<div class="ctext">
+    <div>Random number</div>
+    <div th:hx-get="@{/randomnumber}" hx-trigger="load"></div>
+</div>
+
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide7}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide9}">Next</button>
+</div>
+
+<script>
+    hljs.highlightAll();
+</script>
+

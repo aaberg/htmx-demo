@@ -1,0 +1,9 @@
+<div id="counter">
+    <span th:text="${counter}"></span>
+    <button
+            th:hx-get="@{/counter(value=${counter + 1})}"
+            hx-target="#counter"
+            hx-swap="outerHTML">
+        Count
+    </button>
+</div>

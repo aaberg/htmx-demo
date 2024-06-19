@@ -1,0 +1,41 @@
+<div class="spacer-5"></div>
+<h3><span class="highlight">counter</span> example</h3>
+<div class="spacer-5"></div>
+<div class="ctext">GET /counter returns the following result</div>
+<pre><code class="language-html">&lt;div id="counter&gt;
+    &lt;span"&gt;${counter}&lt;/span&gt;
+    &lt;button
+            hx-get="/counter?value=${counter + 1}"
+            hx-target="#counter"
+            hx-swap="outerHTML"&gt;
+        Count
+    &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="spacer-1"></div>
+<div class="ctext">html with htmx attributes</div>
+<pre><code class="language-html">&lt;div hx-get="/counter?counter=0" hx-trigger="load"&gt;&lt;/div&gt;
+</code></pre>
+
+<div class="spacer-1"></div>
+<div class="ctext" th:hx-get="@{/counter(value=0)}" hx-trigger="load"></div>
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide9}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide11}">Next</button>
+</div>
+
+<script>
+    hljs.highlightAll();
+</script>

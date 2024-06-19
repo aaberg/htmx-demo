@@ -97,7 +97,7 @@ div.sonat-logo {
     background-size: 15rem;
     width: 15rem;
     height: 3rem;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom:0;
 }
@@ -113,7 +113,23 @@ div.ctrl-buttons {
 .spacer-5 {
     height: 5rem;
 }
+.spacer-1 {
+    height: 1rem;
+}
 
 .ib {
     display: inline-block;
+}
+
+pre, code {
+    margin: 0 auto;
+    width: 50rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0, 0.2);
+    font-size: 14pt;
+}
+
+.ctext {
+    margin: 0 auto;
+    width: 50rem;
 }
