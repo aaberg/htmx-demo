@@ -133,3 +133,18 @@ pre, code {
     margin: 0 auto;
     width: 50rem;
 }
+
+div.error input {
+    border: 1px solid red;
+}
+div.error-message {
+    color: red;
+}
+
+table tbody tr td, table thead tr th {
+    padding: 0.1rem 0.5rem;
+}
+
+table thead tr th {
+    text-align: left;
+}

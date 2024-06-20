@@ -1,0 +1,82 @@
+
+<div class="spacer-5"></div>
+<h3><span class="highlight">Live</span> search example</h3>
+
+<div class="spacer-1"></div>
+
+<div class="ctext"><span class="highlight">Html with</span> htmx</div>
+<pre><code>&lt;input type="search"
+    name="query"
+    hx-get="/search"
+    hx-indicator="#loading"
+    hx-trigger="input changed delay:500ms, search"
+    hx-target="#searchbody"
+    hx-swap="innerHTML" /&gt;
+&lt;span id="loading"
+    class="htmx-indicator">Searching&lt;/span&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Id&lt;/th&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Favorite beer&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id="searchbody"&gt;
+
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<div class="spacer-1"></div>
+<div class="ctext">Response from server, when calling GET /search</div>
+<pre><code>&lt;tr&gt;
+    &lt;td&gt;451-46-6847&lt;/td&gt;
+    &lt;td&gt;Simone Hansen&lt;/td&gt;
+    &lt;td&gt;Stout IPA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;762-13-9638&lt;/td&gt;
+    &lt;td&gt;Iona Corolla&lt;/td&gt;
+    &lt;td&gt;Dreadnaught IPA&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+<div class="spacer-1"></div>
+<div class="ctext">Result:</div>
+<div class="ctext">
+    <input type="search" name="query" th:hx-get="@{/search}" hx-indicator="#loading" hx-trigger="input changed delay:500ms, search" hx-target="#searchbody" hx-swap="innerHTML" />
+    <span id="loading" class="htmx-indicator">Searching</span>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Favorite beer</th>
+        </tr>
+        </thead>
+        <tbody id="searchbody">
+
+        </tbody>
+    </table>
+</div>
+
+<div class="spacer-10"></div>
+
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide10}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide12}">Next</button>
+</div>
+
+<script>
+    hljs.highlightAll();
+</script>

@@ -1,0 +1,81 @@
+<div class="spacer-5" xmlns="http://www.w3.org/1999/html"></div>
+<h3>Forms with <span class="highlight">inline</span> validation</h3>
+
+<div class="spacer-5"></div>
+
+<div class="ctext">Html with <span class="highlight">htmx</span></div>
+<pre><code class="language-html">&lt;h4>Signup form&lt;/h4&gt;
+&lt;form th:hx-post="@{/signup}"&gt;
+    &lt;div hx-target="this" hx-swap="outerHTML"&gt;
+        &lt;label>Email
+            &lt;input name="email"
+                hx-post="/signup/email-validation"
+                value="" /&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label>First name
+            &lt;input name="firstName" /&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label>Last name
+            &lt;input name="lastName" /&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type="submit">Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<div class="spacer-1"></div>
+<div class="ctext">POST /signup/email-validation returns the following</div>
+<pre><code>&lt;div hx-target="this" hx-swap="outerHTML" class="error"&gt;
+    &lt;label&gt;Email
+        &lt;input name="email"
+            hx-post="/signup/email-validation"
+            value="the@email.com" /&gt;
+    &lt;/label&gt;
+    &lt;div class="error-message">Email address is already taken&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="ctext">
+    <div>Signup form</div>
+    <form th:hx-post="@{/signup}">
+        <div hx-target="this" hx-swap="outerHTML">
+            <label>Email
+                <input name="email" hx-post="/signup/email-validation" th:value="${email}" />
+            </label>
+        </div>
+        <div>
+            <label>First name
+                <input name="firstName" />
+            </label>
+        </div>
+        <div>
+            <label>Last name
+                <input name="lastName" />
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide10}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide12}">Next</button>
+</div>
+
+<script>
+    hljs.highlightAll();
+</script>

@@ -1,0 +1,7 @@
+<div hx-target="this" hx-swap="outerHTML" th:class="${isError ? 'error' : ''}">
+    <label>
+        Email
+        <input name="email" hx-post="/signup/email-validation" th:value="${email}" />
+    </label>
+    <div th:if="${isError}" class="error-message" th:text="${error}"></div>
+</div>
