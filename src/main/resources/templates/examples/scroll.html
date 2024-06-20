@@ -1,0 +1,19 @@
+<th:block th:each="item, iterStat : ${items}">
+    <tr th:unless="${iterStat.last}">
+        <td th:text="${item.id()}"></td>
+        <td th:text="${item.companyName()}"></td>
+        <td th:text="${item.country()}"></td>
+        <td th:text="${item.cto()}"></td>
+    </tr>
+    <tr th:if="${iterStat.last}"
+        th:hx-get="@{/scroll(page=${nextPage})}"
+        hx-trigger="revealed"
+        hx-swap="afterend"
+        hx-indicator="#spinner">
+        <td th:text="${item.id()}"></td>
+        <td th:text="${item.companyName()}"></td>
+        <td th:text="${item.country()}"></td>
+        <td th:text="${item.cto()}"></td>
+    </tr>
+</th:block>
+

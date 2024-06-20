@@ -1,0 +1,58 @@
+
+<div class="spacer-5"></div>
+
+<h3>Infite scroll <span class="highlight">example</span></h3>
+
+<div clasS="spacer-1"></div>
+
+<div class="ctext">Let's focus on the last line of the response</div>
+<div class="spacer-1"></div>
+<pre><code>&lt;tr hx-get="/scroll?page=2"
+           hx-trigger="revealed"
+           hx-swap="afterend"
+           hx-indicator="#spinner"&gt;
+    &lt;td&gt;123&lt;/td&gt;
+    &lt;td&gt;Aaberg Inc&lt;/td&gt;
+    &lt;td&gt;Denmark&lt;/td&gt;
+    &lt;td&gt;The Lars&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+
+<div class="spacer-5"></div>
+
+<div class="ctext">
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Company</th>
+            <th>Country</th>
+            <th>CTO/Chairman</th>
+        </tr>
+        </thead>
+        <tbody id="companies" >
+        <tr th:hx-get="@{/scroll(page=0)}" hx-trigger="revealed" hx-indicator="#spinner" hx-swap="outerHTML"></tr>
+        </tbody>
+    </table>
+    <img id="spinner" th:src="@{/images/bars.svg}" class="htmx-indicator" alt="loading" />
+</div>
+
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide12}">Previous</button>
+    <button hx-trigger="click, keyup[key=='ArrowRight'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide14}">Next</button>
+</div>
+
+<script>
+    hljs.highlightAll();
+</script>
