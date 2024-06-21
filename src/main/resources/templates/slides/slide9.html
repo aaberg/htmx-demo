@@ -1,14 +1,9 @@
 <div class="spacer-5"></div>
 <h3>Random number <span class="highlight">example</span></h3>
 <h4>Now featuring a button!</h4>
+<div class="center">Demonstrates <span class="highlight">multiple</span> triggers and <span class="highlight">hx-target</span></div>
 <div class="spacer-5"></div>
 
-<div class="ctext">GET /randomnumber returns the following result</div>
-<pre><code class="language-html">
-&lt;div&gt;${rand.next()}&lt;/div&gt;
-</code></pre>
-
-<div class="spacer-1"></div>
 <p class="ctext">html with htmx attributes</p>
 <pre><code class="language-html">&lt;div&gt;Random number&lt;/div&gt;
 &lt;div id="random_number"&gt;&lt;/div&gt;
@@ -18,6 +13,14 @@
     hx-target="#random_number"
 &gt;New random number&lt;/button&gt;
 </code></pre>
+
+<div class="spacer-1"></div>
+
+<div class="ctext">GET /randomnumber returns the following result</div>
+<pre><code class="language-html">
+&lt;div&gt;${rand.next()}&lt;/div&gt;
+</code></pre>
+
 <div class="spacer-1"></div>
 <div class="ctext">Result:</div>
 <div class="ctext">
@@ -30,6 +33,7 @@
     >New random number</button>
 </div>
 
+<div class="spacer-10"></div>
 
 <div class="sonat-logo"></div>
 

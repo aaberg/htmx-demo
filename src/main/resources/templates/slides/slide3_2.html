@@ -1,6 +1,7 @@
 <p class="indent-15 center">Why?</p>
 
 <div hx-trigger="keyup[key=='ArrowRight'] from:body"
-     hx-swap="outerHTML"
+     hx-swap="outerHTML transition:true"
+
      th:hx-get="@{/slides/slide3_3}">
 </div>

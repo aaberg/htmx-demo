@@ -1,0 +1,35 @@
+<div class="spacer-5"></div>
+<h2>More <span class="highlight">resources</span></h2>
+
+<div class="spacer-5"></div>
+<h4>The official website</h4>
+<div class="center"><a href="https://htmx.org">htmx.org</a></div>
+
+<div class="spacer-1"></div>
+<h4>More examples</h4>
+<div class="center"><a href="https://htmx.org/examples/">htmx.org/examples</a></div>
+
+<div class="spacer-1"></div>
+<h4>Really cool View Transition API example (not made with htmx)</h4>
+<div class="center"><a href="https://live-transitions.pages.dev/">live-transitions.pages.dev</a></div>
+
+<div class="spacer-1"></div>
+<h4>This presentation</h4>
+<div class="center"><a href="https://github.com/aaberg/htmx-demo">github.com/aaberg/htmx-demo</a></div>
+
+<div class="spacer-5"></div>
+<h3><span class="highlight">Thanks</span> for watching!</h3>
+
+<div class="sonat-logo"></div>
+
+<div class="ctrl-buttons">
+    <button hx-trigger="click, keyup[key=='ArrowLeft'] from:body"
+            hx-target="#container"
+            hx-push-url="true"
+            hx-swap="innerHTML"
+            th:hx-get="@{/slides/slide13}">Previous</button>
+</div>
+
+<script>
+    hljs.highlightAll();
+</script>

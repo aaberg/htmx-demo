@@ -1,11 +1,12 @@
 <div class="spacer-5" xmlns="http://www.w3.org/1999/html"></div>
 <h3>Forms with <span class="highlight">inline</span> validation</h3>
+<div class="center">Demonstrates <span class="highlight">hx-post</span></div>
 
 <div class="spacer-5"></div>
 
 <div class="ctext">Html with <span class="highlight">htmx</span></div>
 <pre><code class="language-html">&lt;h4>Signup form&lt;/h4&gt;
-&lt;form th:hx-post="@{/signup}"&gt;
+&lt;form hx-post="/signup"&gt;
     &lt;div hx-target="this" hx-swap="outerHTML"&gt;
         &lt;label>Email
             &lt;input name="email"
@@ -60,6 +61,8 @@
         <button type="submit">Submit</button>
     </form>
 </div>
+
+<div class="spacer-10"></div>
 
 <div class="sonat-logo"></div>
 
